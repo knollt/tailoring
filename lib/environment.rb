@@ -1,3 +1,5 @@
+require 'nokogiri'
+
 require_relative "tailoring/version.rb"
 require_relative "tailoring/cli.rb"
 

@@ -1,0 +1,5 @@
+class Tailoring::Brands
+
+
+  
+end 
