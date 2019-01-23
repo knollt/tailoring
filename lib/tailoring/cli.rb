@@ -1,0 +1,3 @@
+class Tailoring::CLI  
+
+end 
