@@ -1,5 +1,0 @@
-# environment
-
-require "tailoring/version"
-
-
