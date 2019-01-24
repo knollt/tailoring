@@ -11,9 +11,17 @@ class Tailoring::CLI
   end
   
   def brand_list
-    Tailoring::Brands.all.each.with_index(1) do |brand, index|
-      puts "#{index}. #{brand.name}"
-    end   
+    # Tailoring::Brands.all.each.with_index(1) do |brand, index|
+    #   puts "#{index}. #{brand.name}"
+    # end   
+  
+    # puts (<<-DOC)
+    #   1. Burberry
+    #   2. Dolce & Gabbana
+    #   3. Gucci
+    #   4. Brioni
+    #   5. Saint Laurent
+    # DOC 
   end   
   
 end 
