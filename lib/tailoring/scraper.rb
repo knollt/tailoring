@@ -1,9 +1,11 @@
 class Tailoring::Scraper 
 
-  def scrapeBrand
+  def scrape_brand
+    index_page = Nokogiri::HTML(open(https://www.thetrendspotter.net/best-suit-brands-men/))
+    binding.pry 
   end
   
-  def scrapeDesc
+  def scrape_desc
   end   
   
 end 
