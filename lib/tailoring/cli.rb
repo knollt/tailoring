@@ -5,6 +5,7 @@ class Tailoring::CLI
     puts "Here are the best 40 men suit brands."
     # scrape list of brands
     # lists suit brands
+    brand_list
     # ask for input -> 1-40
     # user selects #
     # brand description is pulled
@@ -15,13 +16,13 @@ class Tailoring::CLI
     #   puts "#{index}. #{brand.name}"
     # end   
   
-    # puts (<<-DOC)
-    #   1. Burberry
-    #   2. Dolce & Gabbana
-    #   3. Gucci
-    #   4. Brioni
-    #   5. Saint Laurent
-    # DOC 
-  end   
+      puts (<<-DOC)
+        1. Burberry
+        2. Dolce & Gabbana
+        3. Gucci
+        4. Brioni
+        5. Saint Laurent
+      DOC
+    end   
   
 end 
