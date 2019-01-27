@@ -25,4 +25,20 @@ class Tailoring::CLI
       DOC
     end   
   
+  puts "What brand would you like to learn more about?"
+  input = gets.strip
+  
+  brand = Tailoring::Brands.find(input.to_i)
+  
+  
+  puts "Would you like to see another brand? Enter Y or N"
+  
+  input = gets.strip.downcase
+  if input == "Y"
+    brand_list
+  elsif input == "N"
+    puts "Thank you! Have a nice day."
+    exit instance method
+  end   
+  
 end 
