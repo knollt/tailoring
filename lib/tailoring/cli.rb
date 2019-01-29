@@ -1,6 +1,6 @@
 class Tailoring::CLI  
 
-  def start 
+  def start # instance method
     puts "Welcome suit connoiseur! Lets learn more about the top suit brands."
     puts "Here are the best 40 men suit brands."
     # scrape list of brands
@@ -23,10 +23,15 @@ class Tailoring::CLI
         4. Brioni
         5. Saint Laurent
       DOC
+      
+      puts "What brand would you like to learn more about?"
+      puts "Please enter the number of the brand you would like learn about (1-40)."
+       input = gets.strip.to_i
+       puts input 
     end   
   
-  # puts "What brand would you like to learn more about?"
-  # input = gets.strip
+  
+  
   
   # brand = Tailoring::Brands.find(input.to_i)
   
