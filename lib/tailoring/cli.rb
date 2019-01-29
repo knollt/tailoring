@@ -26,8 +26,28 @@ class Tailoring::CLI
       
       puts "What brand would you like to learn more about?"
       puts "Please enter the number of the brand you would like learn about (1-40)."
-       input = gets.strip.to_i
-       puts input 
+       input = gets.strip.downcase
+       case input
+          when "0"
+            puts "exit"
+          when "1"
+            puts "Burberry description"
+            url = https://www.thetrendspotter.net/best-suit-brands-men/
+            Tailoring::Scraper.scrap_brands(url)
+          when "2"  
+            puts "Dolce & Gabbana description"
+          when "3"
+            puts "Gucci description"
+          when "4"
+            puts "Brioni description"
+          when "5"
+            puts "Saint Laurent description"
+          else 
+            puts "invalid"
+          end   
+
+       
+      # create validation method to pull brand number
     end   
   
   
@@ -35,18 +55,18 @@ class Tailoring::CLI
   
   # brand = Tailoring::Brands.find(input.to_i)
   
-  
-  # puts "Would you like to see another brand? Enter Y or N"
-  
-  # input = gets.strip.downcase
-  # if input == "Y"
-  #   brand_list
-  # elsif input == "N"
-  #   puts "Thank you! Have a nice day."
-  #   exit instance method
-  # else 
-  #   puts "I don't understand that answer."
-  #   start
-  # end   
-  
+    def exit 
+      puts "Would you like to see another brand? Enter Y or N"
+      inputted = gets.strip.downcase
+      if inputted == "Y"
+        brand_list
+      elsif inputted == "N"
+        puts "Thank you! Have a nice day."
+        exit instance method
+      else 
+        puts "I don't understand that answer."
+        start
+      end   
+    end
+    
 end 
