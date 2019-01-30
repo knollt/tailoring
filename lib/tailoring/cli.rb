@@ -32,7 +32,7 @@ class Tailoring::CLI
             puts "exit"
           when "1"
             puts "Burberry description"
-            url = https://www.thetrendspotter.net/best-suit-brands-men/
+            url = "https://www.thetrendspotter.net/best-suit-brands-men/"
             Tailoring::Scraper.scrap_brands(url)
           when "2"  
             puts "Dolce & Gabbana description"
