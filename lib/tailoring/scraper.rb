@@ -12,3 +12,8 @@ class Tailoring::Scraper
   end   
   
 end 
+
+#brand_List: = webpage.css("h2.m_-1121914113895685247MsoListParagraph").text
+# add [0] before text gets first item
+
+# brand_desc: = 
