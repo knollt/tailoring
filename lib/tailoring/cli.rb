@@ -5,6 +5,9 @@ class Tailoring::CLI
     puts "Here are the best 40 men suit brands."
     # scrape list of brands
     # lists suit brands
+    url = "https://www.thetrendspotter.net/best-suit-brands-men/"
+    lists = Tailoring::Scraper.scrap_brands(url)
+    puts lists
     brand_list
     # ask for input -> 1-40
     # user selects #
@@ -16,13 +19,13 @@ class Tailoring::CLI
     #   puts "#{index}. #{brand.name}"
     # end   
   
-      puts (<<-DOC)
-        1. Burberry
-        2. Dolce & Gabbana
-        3. Gucci
-        4. Brioni
-        5. Saint Laurent
-      DOC
+      # puts (<<-DOC)
+      #   1. Burberry
+      #   2. Dolce & Gabbana
+      #   3. Gucci
+      #   4. Brioni
+      #   5. Saint Laurent
+      # DOC
       
       puts "What brand would you like to learn more about?"
       puts "Please enter the number of the brand you would like learn about (1-40)."
@@ -32,8 +35,7 @@ class Tailoring::CLI
             puts "exit"
           when "1"
             puts "Burberry description"
-            url = "https://www.thetrendspotter.net/best-suit-brands-men/"
-            Tailoring::Scraper.scrap_brands(url)
+
           when "2"  
             puts "Dolce & Gabbana description"
           when "3"
