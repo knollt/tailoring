@@ -13,6 +13,15 @@ class Tailoring::Scraper
   end
   
   def scrap_desc
+    
+    webpage = Nokogiri::HTML(open(url))
+    
+    brand_link = webpage.css("a.fasc-button.fasc-size-medium.fasc-type-glossy.fasc-ico-before.dashicons-cart.external")
+    
+    brand_link.each.map do |link|
+      link.text
+    end 
+    
   end   
   
 end 
