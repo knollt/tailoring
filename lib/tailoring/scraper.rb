@@ -13,20 +13,20 @@ class Tailoring::Scraper
   end
   
   
-  def scrap_links(url)
-    
+  def self.scrap_links(url)
+    # open sraped brand url 
     webpage = Nokogiri::HTML(open(url))
     
     brand_link = webpage.css("a.fasc-button.fasc-size-medium.fasc-type-glossy.fasc-ico-before.dashicons-cart.external")
     
     brand_link.each.map do |link|
-      link.text
+      puts 'in shop link'
+      # binding pry 
+      # link.text
     end 
-    
   end   
   
 end 
 
 
 
-# brand_desc: = 

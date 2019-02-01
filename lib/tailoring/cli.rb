@@ -11,8 +11,8 @@ class Tailoring::CLI
     
     brand_list
     
-    links = Tailoring::Scraper.scrap_links(url)
-    puts links
+    # links = Tailoring::Scraper.scrap_links(url)
+    # puts links
    
     # ask for input -> 1-40
     # user selects #
@@ -40,7 +40,7 @@ class Tailoring::CLI
             puts "exit"
           when "1"
             puts "Burberry description"
-
+            Tailoring::Scraper.scrap_links(url)
           when "2"  
             puts "Dolce & Gabbana description"
           when "3"
