@@ -12,7 +12,8 @@ class Tailoring::Scraper
     end  
   end
   
-  def scrap_desc
+  
+  def scrap_links(url)
     
     webpage = Nokogiri::HTML(open(url))
     

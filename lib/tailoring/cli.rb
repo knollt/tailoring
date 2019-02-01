@@ -8,7 +8,12 @@ class Tailoring::CLI
     url = "https://www.thetrendspotter.net/best-suit-brands-men/"
     lists = Tailoring::Scraper.scrap_brands(url)
     puts lists
+    
     brand_list
+    
+    links = Tailoring::Scraper.scrap_links(url)
+    puts links
+   
     # ask for input -> 1-40
     # user selects #
     # brand description is pulled
