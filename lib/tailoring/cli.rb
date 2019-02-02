@@ -25,7 +25,7 @@ class Tailoring::CLI
           when "0"
             puts "exit"
           when "1"
-            puts "Burberry description"
+            puts "Burberry"
             Tailoring::Scraper.scrape_links(url)
           when "2"  
             puts "Dolce & Gabbana description"

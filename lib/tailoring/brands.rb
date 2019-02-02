@@ -6,7 +6,7 @@ attr_accessor :url, :name
 
   def initialize(name=nil, url)
     @name = name 
-    @url = "https://www.thetrendspotter.net/best-suit-brands-men/" + url
+    @url =  url
     @@all << self #saving/remembering object
   end
   

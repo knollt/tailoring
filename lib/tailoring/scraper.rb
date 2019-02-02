@@ -19,10 +19,10 @@ class Tailoring::Scraper
     
     brand_link = webpage.css("a.fasc-button.fasc-size-medium.fasc-type-glossy.fasc-ico-before.dashicons-cart.external")
     
-    brand_link.each.map do |link|
-      # puts 'in shop link'
-      binding.pry 
-    # Tailoring::Brands(link.text, link.attributes["href"].value)
+    brand_link.map do |link|
+      puts 'Please click url link below to shop this brand.'
+       
+      Tailoring::Brands(link.text, link.attributes["href"].value)
      
     end 
     
