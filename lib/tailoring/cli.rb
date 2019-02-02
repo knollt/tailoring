@@ -6,20 +6,14 @@ class Tailoring::CLI
     # scrape list of brands
     # lists suit brands
     url = "https://www.thetrendspotter.net/best-suit-brands-men/"
-    lists = Tailoring::Scraper.scrap_brands(url)
+    lists = Tailoring::Scraper.scrape_brands(url)
     puts lists
     
     brand_list
-    
-    # links = Tailoring::Scraper.scrap_links(url)
-    # puts links
-   
-    # ask for input -> 1-40
-    # user selects #
-    # brand description is pulled
   end
   
   def brand_list
+    url = "https://www.thetrendspotter.net/best-suit-brands-men/"
     # Tailoring::Brands.all.each.with_index(1) do |brand, index|
     #   puts "#{index}. #{brand.name}"
     # end   
@@ -40,7 +34,8 @@ class Tailoring::CLI
             puts "exit"
           when "1"
             puts "Burberry description"
-            Tailoring::Scraper.scrap_links(url)
+            
+            Tailoring::Scraper.scrape_links(url)
           when "2"  
             puts "Dolce & Gabbana description"
           when "3"

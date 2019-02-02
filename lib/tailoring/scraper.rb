@@ -1,6 +1,6 @@
 class Tailoring::Scraper 
 
-  def self.scrap_brands(url)
+  def self.scrape_brands(url)
     # open url and scrap brands
     
     webpage = Nokogiri::HTML(open(url))
@@ -13,7 +13,7 @@ class Tailoring::Scraper
   end
   
   
-  def self.scrap_links(url)
+  def self.scrape_links(url)
     # open sraped brand url 
     webpage = Nokogiri::HTML(open(url))
     
