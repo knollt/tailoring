@@ -1,12 +1,12 @@
 class Tailoring::Brands
 
-attr_accessor :desc, :name
+attr_accessor :url, :name
 
   @@all = []
 
-  def initialize(name=nil, desc=nil)
+  def initialize(name=nil, url)
     @name = name 
-    @desc = desc
+    @url = "https://www.thetrendspotter.net/best-suit-brands-men/" + url
     @@all << self #saving/remembering object
   end
   

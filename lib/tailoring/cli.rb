@@ -17,14 +17,6 @@ class Tailoring::CLI
     # Tailoring::Brands.all.each.with_index(1) do |brand, index|
     #   puts "#{index}. #{brand.name}"
     # end   
-  
-      # puts (<<-DOC)
-      #   1. Burberry
-      #   2. Dolce & Gabbana
-      #   3. Gucci
-      #   4. Brioni
-      #   5. Saint Laurent
-      # DOC
       
       puts "What brand would you like to learn more about?"
       puts "Please enter the number of the brand you would like learn about (1-40)."
@@ -34,7 +26,6 @@ class Tailoring::CLI
             puts "exit"
           when "1"
             puts "Burberry description"
-            
             Tailoring::Scraper.scrape_links(url)
           when "2"  
             puts "Dolce & Gabbana description"
