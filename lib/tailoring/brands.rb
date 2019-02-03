@@ -4,7 +4,7 @@ attr_accessor :url, :name
 
   @@all = []
 
-  def initialize(name=nil, url)
+  def initialize(name, url)
     @name = name 
     @url =  url
     @@all << self #saving/remembering object

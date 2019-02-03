@@ -1,5 +1,0 @@
-class Tailoring::BrandsDescription 
-
-
-  
-end 

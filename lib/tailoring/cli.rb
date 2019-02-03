@@ -14,9 +14,6 @@ class Tailoring::CLI
   
   def brand_list
     url = "https://www.thetrendspotter.net/best-suit-brands-men/"
-    # Tailoring::Brands.all.each.with_index(1) do |brand, index|
-    #   puts "#{index}. #{brand.name}"
-    # end   
       
       puts "What brand would you like to learn more about?"
       puts "Please enter the number of the brand you would like learn about (1-40)."
@@ -26,7 +23,8 @@ class Tailoring::CLI
             puts "exit"
           when "1"
             puts "Burberry"
-            Tailoring::Scraper.scrape_links(url)
+            shopUrl = Tailoring::Shop.scrape_links(url) 
+            puts "shopUrl"
           when "2"  
             puts "Dolce & Gabbana description"
           when "3"
