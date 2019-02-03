@@ -10,12 +10,12 @@ attr_accessor :url, :name
     @@all << self #saving/remembering object
   end
   
-  def self.brand_list(brd)
-    self.new(
-      brd.css("h2").text,
+  # def self.brand_list(brd)
+  #   self.new(
+  #     brd.css("h2").text,
       
-      )
-  end  
+  #     )
+  # end  
   
 
   

@@ -24,15 +24,14 @@ class Tailoring::CLI
           when "1"
             puts "Burberry"
             shopUrl = Tailoring::Shop.scrape_links(url) 
-            puts "shopUrl"
           when "2"  
-            puts "Dolce & Gabbana description"
+            puts "Dolce & Gabbana"
           when "3"
-            puts "Gucci description"
+            puts "Gucci"
           when "4"
-            puts "Brioni description"
+            puts "Brioni"
           when "5"
-            puts "Saint Laurent description"
+            puts "Saint Laurent"
           else 
             puts "invalid"
           end   

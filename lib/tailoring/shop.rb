@@ -8,8 +8,8 @@ class Tailoring::Shop
     
     brand_link.map do |link|
       # puts 'Please use the url link below to shop this brand.'
-      link.attributes["href"].value
-      # Tailoring::Brands(link.text, link.attributes["href"].value)
+      # link.attributes["href"].value
+      Tailoring::Brands(link.text, link.attributes["href"].value)
     end 
     
     
