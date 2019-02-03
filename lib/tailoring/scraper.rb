@@ -1,12 +1,14 @@
 class Tailoring::Scraper 
 
-  def self.scrape_brands(url)
+  
+  def get_page
+    Nokogiri::HTML(open("https://www.thetrendspotter.net/best-suit-brands-men/"))
+  end   
+  
+  def scrape_brands_list
     # open url and scrap brands
     
-    webpage = Nokogiri::HTML(open(url))
-    
-    brand_list = webpage.css("h2.m_-1121914113895685247MsoListParagraph")
-    
+    brand_list = .css("h2.m_-1121914113895685247MsoListParagraph")
     brand_list.each.map do |brand|
       brand.text
     end  
