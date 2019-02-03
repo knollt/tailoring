@@ -2,5 +2,5 @@
 
 require_relative '../lib/environment'
 
-Tailoring::CLI.new.start
+Tailoring::CLI.new.call
 

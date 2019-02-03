@@ -1,23 +1,39 @@
 class Tailoring::CLI  
 
-  def start # instance method
+  def call 
+    Tailoring::Scraper.new.suit_brands
     puts "Welcome suit connoiseur! Lets learn more about the top suit brands."
+   
+    start 
+  end   
+  
+  def start
+    puts ""
     puts "Here are the best 40 men suit brands."
+    
+    
+      # lists suit brands
+    
+    puts ""
+    puts "What number would you like to learn more about? Please enter a number 1-40."
+    puts ""
+    
+    input = gets.strip.to_i
+    
+    
+    
     # scrape list of brands
-    # lists suit brands
-    url = "https://www.thetrendspotter.net/best-suit-brands-men/"
-    lists = Tailoring::Scraper.scrape_brands(url)
+  
+    # url = "https://www.thetrendspotter.net/best-suit-brands-men/"
+    
+    lists = Tailoring::Scraper.suit_brands
     puts lists
     
-    brand_list
-  end
-  
-  def brand_list
-    url = "https://www.thetrendspotter.net/best-suit-brands-men/"
+
+    # url = "https://www.thetrendspotter.net/best-suit-brands-men/"
       
-      puts "What brand would you like to learn more about?"
-      puts "Please enter the number of the brand you would like learn about (1-40)."
-       input = gets.strip.downcase
+
+      
        case input
           when "0"
             puts "exit"
