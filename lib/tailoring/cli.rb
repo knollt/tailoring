@@ -1,5 +1,7 @@
 class Tailoring::CLI  
 
+url = "https://www.thetrendspotter.net/best-suit-brands-men/"
+
   def call 
     Tailoring::Scraper.new.suit_brands
     puts "Welcome suit connoiseur! Lets learn more about the top suit brands."
@@ -11,6 +13,8 @@ class Tailoring::CLI
     puts ""
     puts "Here are the best 40 men suit brands."
     
+    brands Tailoring::Scraper.suit_brands(url)
+    puts brands
     
       # lists suit brands
     
@@ -26,7 +30,7 @@ class Tailoring::CLI
   
     # url = "https://www.thetrendspotter.net/best-suit-brands-men/"
     
-    lists = Tailoring::Scraper.suit_brands
+    lists = Tailoring::Scraper.suit_brands(r)
     puts lists
     
 
